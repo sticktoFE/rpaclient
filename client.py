@@ -4,7 +4,6 @@ from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import *
 from uiext.Ui_mainwindow_event import MainWindow
 
-
 Stylesheet = """
 
 #Custom_Widget {
@@ -97,8 +96,7 @@ QLabel {
 class Main(MainWindow):
     def __init__(self,width,height):
         super().__init__(width,height)
-    
-    
+       
 
     def closeEvent(self, event):
         super().closeEvent(event)
@@ -112,5 +110,6 @@ if __name__ == "__main__":
     width = QApplication.desktop().screenGeometry().width()
     height = QApplication.desktop().screenGeometry().height()
     window = Main(width,height)
+    window.startScreenshot()
     window.show() 
     exit(app.exec_())
